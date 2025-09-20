@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+::-webkit-scrollbar {
+width: 8px;
+}
+
+
+::-webkit-scrollbar-thumb {
+    background-color: #f2d273;
+    border-radius: 10px;
+}
+
+
+::-webkit-scrollbar-track {
+    background-color: #1c1c1c;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  height: 100vh;
+  background-color: #141516;
+  color: #e5e5e5;
+}
+
+header h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin: 25px 0;
+  background: linear-gradient(90deg, #fff, #ffdb70);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header img {
+  width: 80px;
+  height: auto;
+  margin: 0 20px;
+}
+
+table {
+  width: 45%;
+  margin: 25px auto;
+  border-collapse: collapse;
+  background-color: #4e47472a;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+  border: 1px solid white;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+caption {
+  font-size: 1.8rem;
+  padding: 12px;
+  font-weight: bold;
+  color: white;
+  letter-spacing: 1px;
+  background-color: #4e47472a;
+  border: 1px solid white;
+}
+
+tr, td:nth-child(2) {
+  color: red;
+  font-weight: bold;
+}
+
+tr, td:first-child {
+  color: #e5e5e5bb;
+}
+
+th, td {
+  border: 1px solid #4a4747;
+  padding: 14px;
+  font-size: 1rem;
+  text-align: center;
+}
+
+th {
+  background: #ffdb7084;
+  font-weight: bold;
+  color: white;
+}
+
+td {
+  background-color: #4e47472a;
+  transition: background 0.2s ease, transform 0.15s ease;
+  color: #f2f2f2f2;
+}
+
+td:hover {
+  background: #FFDB70;
+  color: #fff;
+  transform: scale(1.05);
+  border-radius: 6px;
+}
+td.holiday {
+  background: #FFDB70;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+}
+td.holiday:hover {
+  background: #ffdb70b1;
+  transform: scale(1.05);
+}
+
+.popup-bg {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0; top: 0; right: 0; bottom: 0;
+      background: rgba(0,30,60,0.7);
+      justify-content: center;
+      align-items: center;
+    }
+    .popup-bg.active {
+      display: flex;
+    }
+    .popup {
+      background: rgb(36, 48, 74);
+      border-radius: 12px;
+      padding: 24px 32px;
+      width: auto;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.28);
+      text-align: center;
+      position: relative;
+      animation: popupIn 0.2s;
+      color: rgb(255, 240, 180);
+    }
+    @keyframes popupIn {
+      from { transform: scale(0.9); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+    .popup img {
+      width: 500px;
+      margin-bottom: 12px;
+      border-radius: 8px;
+      box-shadow: 0 2px 12px rgba(189, 176, 2, 0.18);
+    }
+    .popup h2 {
+      margin: 0 0 8px 0;
+      color: rgb(255, 238, 0);
+      text-shadow: 0 2px 8px rgba(0,0,0,0.18);
+    }
+    .popup p {
+      color: rgb(255, 246, 180);
+      font-size: 1em;
+      margin-bottom: 0;
+    }
+    .close-btn {
+      position: absolute;
+      top: 8px; right: 12px;
+      background: none;
+      border: none;
+      font-size: 1.5em;
+      color: rgb(200, 173, 120);
+      cursor: pointer;
+      transition: color 0.2s;
+    }
+    .close-btn:hover {
+      color: rgb(255, 208, 0);
+    }
